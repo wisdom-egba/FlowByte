@@ -1,5 +1,5 @@
-import logo from "./icons/logo (2).svg";
-import Hamburger from "./icons/hamburger";
+import logo from "./icons/logo.svg";
+import HamburgerMenu from "./icons/HamburgerMenu";
 import Cancel from "./icons/Cancel";
 //exporting assets to different components easily
-export { logo, Hamburger, Cancel };
+export { logo, HamburgerMenu, Cancel };

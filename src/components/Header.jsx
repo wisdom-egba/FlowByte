@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Cancel, Hamburger, logo } from "../assets/asset";
+import { Cancel, HamburgerMenu, logo } from "../assets/asset";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -10,13 +10,21 @@ const Header = () => {
     setToggle(!toggle);
     console.log(toggle);
   };
+
+  const linkClass = ({ isActive }) =>
+    isActive
+      ? "bg-[#C713B5] text-black px-3 py-2 rounded-md"
+      : "text-black bg-slate-200 hover:bg-[#C713B5] px-3 py-2 rounded-md";
   return (
     <>
-      <div className="flex justify-between px-4 pt-3 w-full border-b">
+      <div
+        className="flex justify-between px-4 pt-3 w-full border-b h-full"
+        // onClick={toggle && ToggleMenu}
+      >
         <div className="flex items-center gap-2 z-10">
           <img src={logo} alt="table-24" className=" w-[35px] md:w-[40px]" />
           <h1 className=" text-[24px] md:text-[34px] text-[#3d3d3d] font-black">
-            Tab-24
+            FlowByte
           </h1>
         </div>
         <div className="flex items-center ">
@@ -30,12 +38,16 @@ const Header = () => {
             <div className="fixed top-0 right-0 py-3 px-2">
               <Cancel toggle={ToggleMenu} />
             </div>
-            <Link to="/">Pricing</Link>
-            <Link to="/">Knowledge Area</Link>
+            <NavLink to="/pricing" className={linkClass}>
+              Pricing
+            </NavLink>
+            <NavLink to="/knowledge-areas" className={linkClass}>
+              Knowledge Area
+            </NavLink>
             <Button content="Get Started" />
           </div>
           <div>
-            <Hamburger toggle={ToggleMenu} />
+            <HamburgerMenu toggle={ToggleMenu} />
           </div>
         </div>
       </div>

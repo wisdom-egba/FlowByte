@@ -1,10 +1,11 @@
 import React from "react";
-import { Header } from "../components";
+import { Areas, Footer, Header, Pricing } from "../components";
 
 const AppPage = () => {
   return (
     <div>
       <Header />
+      <Footer />
     </div>
   );
 };
