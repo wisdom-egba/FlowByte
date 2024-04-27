@@ -4,7 +4,7 @@ import { logo } from "../assets/asset";
 const Footer = () => {
   return (
     <>
-      <div className=" bottom-0 fixed flex flex-col md:flex-row w-full items-start gap-9 md:gap-0 justify-around border border-t-slate-200 p-[20px] pb-16">
+      <div className="   flex flex-col md:flex-row w-full items-start gap-9 md:gap-0 justify-around border border-t-slate-200 p-[20px] pb-16 bg-slate-100">
         <div className="flex items-center justify-center">
           <a href="/">
             <img src={logo} alt="table-24" className=" w-[30px] md:w-[35px]" />
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center fixed bottom-0 justify-center w-full py-2">
+      <div className="flex items-center   justify-center w-full py-2">
         Copyright © 2024 FlowByte®
       </div>
     </>

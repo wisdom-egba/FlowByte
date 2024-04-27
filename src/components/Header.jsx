@@ -31,7 +31,7 @@ const Header = () => {
           <div
             className={`${
               toggle
-                ? " bg-slate-200 fixed top-0 right-0 w-2/3 md:w-full h-full flex-col flex items-start outline-none z-20 py-10 md:py-0  px-3 md:px-0  "
+                ? " bg-slate-200 fixed top-0 right-0 w-2/3 md:w-full h-full flex-col flex items-start outline-none z-40 py-10 md:py-0  px-3 md:px-0  "
                 : "hidden"
             } md:outline-none md:flex md:flex-row gap-6 md:gap-7 md:items-center md:relative md:bg-transparent `}
           >
